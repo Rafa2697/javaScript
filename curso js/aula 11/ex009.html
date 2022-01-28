@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indentidade nacional</title>
+    <style>
+        body{
+            background-color: cornflowerblue;
+        }
+    </style>
+</head>
+<body> <h1>Embaixada americana</h1>
+    Nacionalidade: <input type="text"name= 'país' id= 'país'>
+    <input type="button" value="pesquisar" onclick="clicar()">
+    <div id= "res">
+    </div>
+    <style>
+        head{
+            background-color: rgb(6, 35, 88);
+        }
+    </style>
+
+    <script>
+        function clicar(){
+        var pais = window.document.getElementById('país')
+        var res = window.document.getElementById('res')
+
+        var vel = String(pais.value).toLocaleLowerCase()
+        res.innerText = `sua nacionalidade é ${vel}`
+        if(vel == 'americano'){
+            res.innerHTML = '<strong>você é americano</strong>'
+        }else{
+            res.innerHTML = 'você é estrangeiro'
+        }
+        }
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+    <header>
+        <h1>Calculadora</h1>
+    </header>
+    <section>
+        <div>
+            <form name="calcform" method="post" action="">
+                <fieldset>
+                    <legend>Devin - Calculadora Simples</legend>
+
+                    Digite o valor <strong>1:</strong> 
+                    <input type="number" name="valor1" id="valor1"><br>
+
+                    <label for="valor2">Digite o valor <strong>2</strong>:</label>
+                    <input type="text" name="valor2" id="valor2" /> <br>
+
+                    <label for="oper">Selecione a operação:</label>
+                    <select name="oper" id="oper">
+                        <option value="somar">Somar</option> <br>
+                        <option value="subtrair">Subtrair</option>
+                        <option value="multiplicar">Multiplifcar</option>
+                        <option value="dividir">Dividir</option>
+                    </select> <br>
+
+                    <label for="res">Resultado:</label> 
+                    <input type="text" name="res" id="res" />
+
+                    <input type="button" value="calcular" onclick="calcular">
+                </fieldset>
+            </form>
+
+        </div>
+
+        <div>
+
+        </div>
+
+    </section>
+    <footer>
+        <p>&copy; Cursoemvideo</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
