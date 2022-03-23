@@ -9,22 +9,22 @@
 </head>
 <body>
     <header>
-        <h1>Calculadora</h1>
+        <h1>Calculadora<h1>
     </header>
-    <section>
+    
     <div>
         <form name="calcform" method="post" action="">
             <fieldset>
-               <legend>Calculadora</legend>
+               <legend>Calculadora<legend>
          
-               <label for="valor1">Digite o valor <strong>1</strong>:</label>
-               <input type="number" name="valor1" id="valor1" />
+               <label for="valor1">Digite o valor <strong>1</strong>:<label>
+               <input type="text" name="valor1" id="valor1" >
          
                <label for="valor2">Digite o valor <strong>2</strong>:</label>
-               <input type="number" name="valor2" id="valor2" />
+               <input type="text" name="valor2" id="valor2" />
 
-               <label for="oper">Selecione a operação</label>
-               <select name="oper" id="oper">
+               <label for="oper">Selecione a operação<label>
+               <select name="oper" id="oper"> <!-- oper é operador-->
                     <option value="somar">Somar</option>
                     <option value="subtrair">Subtrair</option>
                     <option value="multiplicar">multiplicar</option>
@@ -34,17 +34,15 @@
                 <label for="res">Resultado:</label>
                 <input type="text" name="res" id="res" />
 
-                <input type="button" value="Calcular" class="botao" onclick="calcular (document.calform.oper.value)" >
+                <input type="button" value="calcular" class="botao" onclick="calcular (document.calcform.oper.value)" />
             </fieldset>
          </form>
-    </div>
-
-    <div>
+    
         
 
 
     </div>
-    </section>
+    
 
     <footer>
         <p>Criado por Rafael</p>
