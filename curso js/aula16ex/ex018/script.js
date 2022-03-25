@@ -62,3 +62,4 @@ function finalizar() {
         res.innerHTML += `<p> A média dos valores digitados é ${media} </p>`
      }
 }
+/**/ */
