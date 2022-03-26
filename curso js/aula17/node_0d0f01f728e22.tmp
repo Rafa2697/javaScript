@@ -3,4 +3,4 @@ let amigo = {nome: 'josé', sexo: 'm', peso: 85.4, engordar(p){
     this.peso += p
     
 }}
-console.log(`${amigo.nome} pesa ${amigo.peso}kg`)
+console.log(amigo.nome)
