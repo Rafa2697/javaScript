@@ -8,6 +8,7 @@
     <style>
         body{
             font: normal 30pt Arial;
+            background-color: brown;
         
         }
     </style>
@@ -15,9 +16,10 @@
 <body>
     
     <script>
-        var nome = window.prompt('qual é seu nome ? ')
-        document.write(`Ola, ${nome} Seu nome tem ${nome.length} letras. <br/>`)
-        document.write(`Seu nome em maiúscula é ${nome.toUpperCase()}`)
+        var nome = window.prompt("qual seu nome?")
+        document.write(`Olá ${nome}, seu nome tem ${nome.length} letras </br>`) 
+        document.write(`seu nome em maiúscula é ${nome.toUpperCase()}`)
+        document.write(`seu nome em letra minuscula é ${nome.toLowerCase()}`)
     </script>
 </body>
 </html>
