@@ -7,14 +7,31 @@
     <title>conversor de medidas</title>
 
     <style>
+        body{
+            background-color:cornflowerblue;
+            text-align: center;
+        }
+
+
 
     </style>
 </head>
 
-<h1>conversor de medidas</h1>
+<h1>Conversor de medidas</h1>
+
+<button onclick="converter()">Coverter</button>
+<p>Clique no botão acima para iniciar</p>
 
 
+<script>
+    function converter(){
+        let m = window.prompt("Digite uma distância em metros (m)")
+        metros = parseFloat(m)
 
+        alert(typeof(metros))
+
+    }
+</script>
 
     
 </body>
