@@ -21,16 +21,34 @@
 
 <button onclick="converter()">Coverter</button>
 <p>Clique no botão acima para iniciar</p>
+<div id="res">Resultado</div>
+
+
 
 
 <script>
     function converter(){
-        let m = window.prompt("Digite uma distância em metros (m)")
-        metros = parseFloat(m)
+        let m = Number(window.prompt("Digite uma distância em metros (m)"))
+                //parseFloat ou Number para converter a string em number
+                let res = document.getElementById('res')
 
-        alert(typeof(metros))
+                let result = (m * 1) / 1000;
+                document.write(`${result} quilômetros(km)`)
+               
+                
+
+           
+               
+
+                
+
+
+
+
+        
 
     }
+    
 </script>
 
     
