@@ -12,6 +12,15 @@
             text-align: center;
         }
 
+        #msg{
+            font-weight: bold;
+        }
+
+        #botao{
+            border-radius: 9px;
+            cursor: pointer;
+        }
+
 
 
     </style>
@@ -19,10 +28,16 @@
 
 <h1>Conversor de medidas</h1>
 
-<button onclick="converter()">Coverter</button>
+<button id="botao" onclick="converter()">Coverter</button>
 <p>Clique no botão acima para iniciar</p>
-<div id="reskm"></div>
-<div id="reshm"></div>
+<div id="msg"></div>
+<div id="res"></div>
+<div id="res1"></div>
+<div id="res2"></div>
+<div id="res3"></div>
+<div id="res4"></div>
+<div id="res5"></div>
+
 
 
 
@@ -31,12 +46,28 @@
     function converter(){
         let m = Number(window.prompt("Digite uma distância em metros (m)"))
                 //parseFloat ou Number para converter a string em number
-                let reskm = document.getElementById('reskm')
-                let reshm = document.getElementById('reshm')
+                let res = document.getElementById('res')
+                let res1 = document.getElementById('res1')
+                let res2 = document.getElementById('res2')
+                let res3 = document.getElementById('res3')
+                let res4 = document.getElementById('res4')
+                let res5 = document.getElementById('res5')
+                
 
                 let km = (m * 1) / 1000;
                 let hm = (m * 1) / 100;
+                let dam = (m * 1) / 10;
+                let dm = (m * 1) / 0.1;
+                let cm = (m * 1) / 0.01;
+                let mm = (m * 1) / 0.001;
+
+                msg.innerHTML = (`A distância de ${m} metros, correnponde a...`)
                 res.innerHTML = (`${km} quilômetros(km)`)
+                res1.innerHTML = (`${hm} Hectômetros(hm)`)
+                res2.innerHTML = (`${dam} Decâmetro(dam)`)
+                res3.innerHTML = (`${dm} Decímetro(dm)`)
+                res4.innerHTML = (`${cm} Centíentro(cm)`)
+                res5.innerHTML = (`${mm} Milímetros(mm)`)
              
                
                 
