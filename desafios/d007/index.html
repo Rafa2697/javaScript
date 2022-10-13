@@ -8,10 +8,46 @@
 
     <style>
 
+        body{
+            background-color: cadetblue;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+        }
+
+        main{
+            background-color:darkgray;
+            border-radius: 10px;
+            height: 100vh;
+            width: 50vw;
+            box-shadow: 2px 4px 3px rgba(0, 0, 0, 0.141);
+        }
+
     </style>
 </head>
 <body>
+
+    <main>
+        <h1>Conversor R$ -> US$</h1>
+
+        <button id="botao" onclick="converter()">Converter</button>
+
+        <p>Clique no botão acima para iniciar</p>
+
+        <div id="res"></div>
+    </main>
     
-    
+    <script>
+      let d = Number (window.prompt('Antes de mais nada. Quanto está a cotação do dólar agora?'))
+
+        function converter(){
+            let r = Number (window.prompt('Quantos R$ você tem na carteira?'))
+
+            let c = r / d
+
+            res.innerHTML = (`Você tem $${c}`)
+
+        }
+    </script>
 </body>
 </html>
