@@ -8,17 +8,61 @@
 
     <style>
 
+        body{
+            background-color: aquamarine;
+            display: flex;
+            justify-content: center;
+
+        }
+
+        #botao{
+            border-radius: 8px;
+        }
+
+        main{
+            background-color: steelblue;
+            width: 50%;
+            height: 100vh;
+            text-align: center;
+            border-radius: 10px;
+
+        }
+
+        #msg{
+            font-weight: bolder;
+        }
+
     </style>
 </head>
 <body>
 
-    <h1>Conversor de Temperatura</h1>
+    <main>
+        <h1>Conversor de Temperatura</h1>
+        <button id="botao" onclick="converter()">Converter</button>
+        <p>Clique no botão para iniciar</p>
 
-    <button id="botao" onclick="converter()"></button>
-
-    <p>Clique no botão para iniciar</p>
+        <div id="msg"></div> <br>
+        <div id="res"></div>
+        <div id="res1"></div>
+    </main>
 
     <script>
+
+        function converter(){
+            let c = Number(window.prompt('Digite uma temperatura em °C (celcius)'))
+
+            let res = document.getElementById('res')
+            let res1 = document.getElementById('res1')
+
+            let cf = (c * 1.8) + 32
+            let ck = c + 273.15
+
+            msg.innerHTML = (`A temperatura de ${c}°C corresponde a.... `)
+            res.innerHTML = (`${cf}°F Fahrenheit`)
+            res1.innerHTML = (`${ck}°K kelvin`)
+
+
+        }
 
     </script>
     
