@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de bhaskara</title>
+
+    <style>
+        body{
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+        }
+
+        main{
+            background-color: whitesmoke;
+            min-height: 100vh;
+            width: 50vw;
+            text-align: center;
+            border-radius: 5%;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+            
+        }
+
+        #botao{
+            background-color: teal;
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            color: whitesmoke;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+        }
+
+        #msg{
+            font-weight: bolder;
+        }
+
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Resolvendo Bhaskara</h1>
+
+        <button id="botao" onclick="calc()">Calcular</button>
+        <p>Considerando uma enquação no formato ax² + bx + c = 0, <br> aperte o botão acima para calcular o valor de ▲ </p>
+
+        <div id="msg"></div> <br>
+        <div id="equa"></div>
+        <div id="calcu"></div>
+        <div id="valorcalc"></div>
+
+    </main>
+
+    <script>
+        function calc(){
+            let a = Number (window.prompt('Qual o valor de (a)?'))
+            let b = Number (window.prompt('Qual o valor de (b)?'))
+            let c = Number (window.prompt('Qual o valor de (c)?'))
+
+            equa.innerHTML = (`A equação atual é ${a}x² + ${b}x + ${c} = 0`)
+            calcu.innerHTML = (`O cálculo realizado será ▲ = ${b}² -4 * ${a} * ${c}`)
+
+            let delta = b ** 2 - (4 * a * c);
+
+            let r1 = ( -b + Math.sqrt(delta) / (2*a))
+            let r2 = (-b - Math,sqrt(delta) (2*a))
+
+
+
+
+        }
+
+    </script>
+</body>
+</html>

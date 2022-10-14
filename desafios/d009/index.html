@@ -61,12 +61,17 @@
             ajuste = salario * reajuste / 100
             newSal = ajuste + salario
 
-            //salario, reajuste e newSal precisam ser convertido em valor monetário e porcentagem BRL. 
+            //variavel.toLocaleString('pt-br',{style:'currency', currency:'BRL'} para transformar um valor em valor monetário. 
+
+            let salarioF = salario.toLocaleString('pt-br', {style:'currency', currency:'BRL'})
+            let newSalF = newSal.toLocaleString('pt-br',{style:'currency', currency:'BRL'})
+            let ajusteF = ajuste.toLocaleString('pt-br',{style:'currency', currency:'BRL'})
+            let reajusteF = reajuste.toLocaleString('pt-br', {style:'percent'})
 
             msg.innerHTML = (`${nome} recebeu um aumento salarial!`)
-            sal.innerHTML = (`O salário atual era ${salario}`)
-            aumento.innerHTML = (`Com o aumento de ${reajuste}, o salário vai aumentar ${newSal} no próximo mÊs.`)
-            final.innerHTML = (`E a partir daí, ${nome} vai passar a ganhar ${newSal}`)
+            sal.innerHTML = (`O salário atual era ${salarioF}`)
+            aumento.innerHTML = (`Com o aumento de ${reajusteF}, o salário vai aumentar ${ajusteF} no próximo mÊs.`)
+            final.innerHTML = (`E a partir daí, ${nome} vai passar a ganhar ${newSalF}`)
 
 
         }
