@@ -27,6 +27,10 @@
             border-radius: 5px;
         }
 
+        #msg{
+            font-weight: bolder;
+        }
+
     </style>
 </head>
 <body>
@@ -38,7 +42,9 @@
         <p>Clique no botão acima para iniciar</p>
         <br>
         <div id="msg"></div>
-        <div id="valorp"></div>
+        <div id="valor1"></div>
+        <div id="valor2"></div>
+        <div id="valor3"></div>
     </main>
     
 
@@ -48,10 +54,18 @@
             let nome = window.prompt('Qual o produto que você está comprando?')
             let valor = window.prompt(`Qual o preço de ${nome}`)
 
+            valorp = valor * 10/100
+            valorf = valor - valorp
+            desc = valor - valorf
             
+            let valform = valor.toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
 
             msg.innerHTML = (`Calculando desconto de 10% para ${nome}`)
-            valorp.innerHTML = (`O preço original era ${valor}`)
+            valor1.innerHTML = (`O preço original era ${valform}`)
+            valor2.innerHTML = (`Você acaba de ganhar R$ ${desc} de desconto(-10%)`)
+            valor3.innerHTML = (`No fim, você vai pagar R$ ${valorf} no produto ${nome}`)
+
+
 
         }
 
