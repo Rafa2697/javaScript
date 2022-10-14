@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reajuste Salárial</title>
+
+    <style>
+        body{
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+        }
+
+        main{
+            background-color: whitesmoke;
+            min-height: 100vh;
+            width: 50vw;
+            text-align: center;
+            border-radius: 5%;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+            
+        }
+
+        #botao{
+            background-color: teal;
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            color: whitesmoke;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+        }
+
+        #msg{
+            font-weight: bolder;
+        }
+
+    </style>
+</head>
+<body>
+    <main>
+        <h1>Reajuste Salárial</h1>
+
+        <button id="botao" onclick="calc()">Calcular</button>
+        <br>
+        <div id="msg"></div>
+        <div id="sal"></div>
+        <div id="aumento"></div>
+        <div id="final"></div>
+    </main>
+
+
+    <script>
+
+        function calc(){
+            let nome = window.prompt('Qual o nome do funcionário?')
+            let salario = Number(window.prompt(`Qual o salário de ${nome}`))
+            let reajuste = Number(window.prompt(`O salário de ${nome} vai ser reajustado em qual porcentagem?`))
+
+            ajuste = salario * reajuste / 100
+            newSal = ajuste + salario
+
+            //salario, reajuste e newSal precisam ser convertido em valor monetário e porcentagem BRL. 
+
+            msg.innerHTML = (`${nome} recebeu um aumento salarial!`)
+            sal.innerHTML = (`O salário atual era ${salario}`)
+            aumento.innerHTML = (`Com o aumento de ${reajuste}, o salário vai aumentar ${newSal} no próximo mÊs.`)
+            final.innerHTML = (`E a partir daí, ${nome} vai passar a ganhar ${newSal}`)
+
+
+        }
+
+
+    </script>
+</body>
+</html>
