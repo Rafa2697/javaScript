@@ -49,7 +49,7 @@
         <div id="msg"></div> <br>
         <div id="equa"></div>
         <div id="calcu"></div>
-        <div id="valorcalc"></div>
+        <div id="val"></div>
 
     </main>
 
@@ -62,12 +62,12 @@
             equa.innerHTML = (`A equação atual é ${a}x² + ${b}x + ${c} = 0`)
             calcu.innerHTML = (`O cálculo realizado será ▲ = ${b}² -4 * ${a} * ${c}`)
 
-            let delta = math.pow(b,2) - (4 * a * c)
+            let delta = b ** 2 - 4 * a * c
 
             let r1 = (-b + Math.sqrt(delta)) / (2*a)
             let r2 = (-b - Math.sqrt(delta)) / (2*a)
 
-            valorcalc.innerHTML = (`O valor calculado foi ▲ = ${r1}  ${r2}`)
+            val.innerHTML = (`O valor calculado foi ▲ = ${delta} x'${r1}  x''${r2}`)
 
 
 
