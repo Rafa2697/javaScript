@@ -46,7 +46,8 @@
 
         <p id="msg">Informe um ano para saber se ele é Bissexto</p>
 
-        <div id="result"></div>
+        <div id="result1"></div>
+        <div id="result2"></div>
     </main>
     
     <script>
@@ -55,11 +56,13 @@
             let ano = Number (window.prompt("Qual é o ano que você quer verificar?"))
 
             if (ano%400 == 0)
-                result.innerHTML = (`O ano ${ano} é bissexto`)
+                result1.innerHTML = (`O ano ${ano} é bissexto`)
             else if (ano%4 == 0 && ano%100!=0)
-                result.innerHTML = (`O ano ${ano} é bissexto`)
+                result1.innerHTML = (`O ano ${ano} é bissexto`)
             else
-                result.innerHTML = (`O ano ${ano} não é bissexto`)
+                result2.innerHTML = (`O ano ${ano} não é bissexto`)
+                subr = result.substring(8)
+                subr.style.background = 'red'
 
         }
 
