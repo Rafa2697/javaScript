@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>variação de preço</title>
+
+    <style>
+        body{
+            background-color: teal;
+            display: flex;
+            justify-content: center;
+        }
+
+        main{
+            background-color: whitesmoke;
+            min-height: 100vh;
+            width: 50vw;
+            text-align: center;
+            border-radius: 5%;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+            
+        }
+
+        #botao{
+            background-color: teal;
+            width: 200px;
+            height: 30px;
+            border-radius: 10px;
+            color: whitesmoke;
+            box-shadow: 1px 2px 1px rgba(0, 0, 0, 0.261);
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        #botao:hover{
+            background-color: rgb(4, 59, 59);
+            
+        }
+
+        #msg{
+            font-weight: bolder;
+        }
+    </style>
+</head>
+<body>
+
+    <main>
+        <h1>variação de preço</h1>
+
+        <button id="botao" onclick="calc()">Verificar</button>
+        <p id="msg">Clique no botão acima para analizar a mudança de preço</p>
+
+        
+        <div id="msg1"></div>
+        <div id="info"></div>
+    </main>
+    
+    <script>
+
+        function calc(){
+            let val1 = Number (window.prompt('Qual era o preço anterior do produto?'))
+            let val2 = Number (window.prompt("Qual é o preço atual do prduto?"))
+
+            msg.innerHTML = ('Analizando os valores informados')
+            msg1.innerHTML = (`O produto custava ${val1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL' })} e agora custa ${val2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`)
+            
+
+            if ( val1 > val2){
+                let res = (va1 - val2).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
+                
+                info.innerHTML = (res)
+            }
+                
+                
+            else if (val2 > val1){
+                let res = (val2 - val1).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
+
+                info.innerHTML = (res)
+
+            }
+                
+
+        }
+
+    </script>
+</body>
+</html>
