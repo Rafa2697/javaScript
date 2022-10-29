@@ -62,13 +62,13 @@
     <script>
 
         function calc(){
-            let val1 = Number (window.prompt('Qual era o preço anterior do produto?'))
-            let val2 = Number (window.prompt("Qual é o preço atual do prduto?"))
+            let val1 = Number(window.prompt('Qual era o preço anterior do produto?'))
+            let val2 = Number(window.prompt("Qual é o preço atual do prduto?"))
 
             msg.innerHTML = ('Analizando os valores informados')
             msg1.innerHTML = (`O produto custava ${val1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL' })} e agora custa ${val2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`)
             
-            let por = (val1 - val2)/val1 * 100
+            
 
             if ( val1 > val2){
                 let res = (va1 - val2).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
@@ -77,7 +77,7 @@
                 info2.innerHTML = (`O preço desceu ${(res).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior`)
 
                 
-
+                let por = (val1 / val2) * 100
                 info3.innerHTML = (`${por}% a mais`)
 
             }
@@ -90,7 +90,7 @@
                 info2.innerHTML = (`O preço subiu ${(res).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior`)
 
                 
-
+                let por = (val2 - val1)/val2 * 100
                 info3.innerHTML = (`${por}% a menos`)
 
             }
