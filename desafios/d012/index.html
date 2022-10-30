@@ -68,33 +68,23 @@
             msg.innerHTML = ('Analizando os valores informados')
             msg1.innerHTML = (`O produto custava ${val1.toLocaleString('pt-br', {style: 'currency', currency: 'BRL' })} e agora custa ${val2.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}`)
             
-            
-
-            if ( val1 > val2){
-                let res = (va1 - val2).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
-                
+            if (val1 > val2){
+                let res = (val1 - val2).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
                 info.innerHTML = ('hoje o produto está mais barato')
                 info2.innerHTML = (`O preço desceu ${(res).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior`)
 
-                
-                let por = (val1 / val2) * 100
-                info3.innerHTML = (`${por}% a mais`)
-
-            }
-                
-                
-            else if (val2 > val1){
+                let por = (val1 - val2) * val1 / 100 //o resultado de val1 - val2 precisa ser multiplicado por val1 para depois ser divido por 100.
+                info3.innerHTML = (`${por}% a menos de diferença.`)
+            }else{
                 let res = (val2 - val1).toLocaleString('pt-br', {style: 'currency', currency:'BRL'});
-
-                info.innerHTML = ('Hoje o produto está mais caro')
+                info.innerHTML = ('hoje o produto está mais caro')
                 info2.innerHTML = (`O preço subiu ${(res).toLocaleString('pt-br', {style: 'currency', currency: 'BRL'})} em relação ao preço anterior`)
 
-                
-                let por = (val2 - val1)/val2 * 100
-                info3.innerHTML = (`${por}% a menos`)
-
+                let por = (val2 - val1) * val2 / 100 //o resultado da subtração sempre tem que ser multiplicado pelo maior numero para depois fazer a divisão por 100
+                info3.innerHTML = (`${por}% a mais de diferença.`)
             }
-
+            
+          
 
                 
 
